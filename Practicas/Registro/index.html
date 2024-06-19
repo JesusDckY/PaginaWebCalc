@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica Validaciones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo">Practica de Validaciones</h1>
+        <h2 class="Subtitulo">Formulario de registro</h2>
+
+        <form action="" method="get">
+            <label for="username">Nombre de Usuario:</label><br>
+            <input type="text" class="input" id="username" name="username" pattern="^[a-zA-Z0-9]{5,15}$" title="Debe tener entre 5 y 15 caracteres alfanuméricos" required><br>
+
+            <label for="password">Contraseña:</label><br>
+            <input type="text" class="input" id="password" name="password" pattern="^[a-zA-Z0-9]{8,20}$" title="Minimo 8 caracteres, incluyendo una letra mayuscula, una minuscula, un numero y un caracter especial (!, @, #, etc.)" required><br>
+
+            <label for="email">Email:</label><br>
+            <input type="text" class="input" id="email" name="email" pattern="^[a-zA-Z0-9\@]{10,30}[\.]com$" title="Debe tener entre 10 y 30 caracteres alfanuméricos" required><br>
+
+            <label for="numero">Numero de telefono:</label><br>
+            <input type="number" class="input" id="numero" name="numero" pattern="^[\+][0-9] {12,15}$" title="Debe ser un numero valido siguiendo el formato internacional" required><br>
+
+            <label for="fch">Fecha de nacimiento</label><br>
+            <input type="date" class="input" pattern="date" required max="2006-01-01" title="Debe ingresar su fecha de nacimiento" required><br>
+
+            <label for="CP">Codigo postal:</label><br>
+            <input type="number" class="input" id="CP" name="CP" pattern="^[0-9]{5,5}$" title="Ingresa un codigo postal valido" required><br>
+
+            <input type="submit" class="boton">
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
